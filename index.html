@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .college-list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .college-list .college{
+            border-style: solid;
+        }
+        .image-desc{
+            position: relative;
+            background-image: url("photo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            width: 100%;
+        }
+        .image-desc .best{
+            position: absolute;
+            background-color: white;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            width: 150px;
+            bottom: 10%;
+        }
+        .image-desc .distance{
+            position: absolute;
+            background-color: white;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            width: 100px;
+            bottom: 10%;
+            left: 200px;
+        }
+        .image-desc .rank{
+            position: absolute;
+            /* width: 500px; */
+            bottom: 10%;
+            left: 500px;
+            color: white;
+        }
+        .image-desc .rating{
+            position: absolute;
+            width: 50px;
+            background-color: rgb(238, 178, 12);
+            background-repeat: no-repeat;
+            color: white;
+            right: 125px;
+            top: 10%;
+        }
+        .college-details{
+            position: relative;
+        }
+        .college-details .fees{
+            position: absolute;
+            color: red;
+            right: 20px;
+            bottom: 20%;
+        }
+        .college-details .semester{
+            position: absolute;
+            right: 20px;
+            bottom: 10%;
+        }
+        .college-details .others{
+            position: absolute;
+            color: rgb(37, 211, 144);
+            right: 20px;
+            bottom: 0;
+        }
+        .college-details .strike{
+            position: absolute;
+            text-decoration: line-through;
+            right: 20px;
+            top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <p>Colleges in North India</p>
+    <section class="college-list">
+        <div class="college">
+            <!-- <div class="image-section">
+                <img src="./photo.jpg">
+            </div> -->
+
+            <div class="image-desc">
+                <div class="best">Best college 2018</div>
+                <div class="distance">2 kms away</div>
+                <div class="rank">#7 in 260 colleges in north campus</div>
+                <div class="rating">3.9/5 Very Good</div>
+            </div>
+
+            <div class="college-details">
+                <div class="name">Hansraj College</div>
+                <div class="location1">Near Metro Station</div>
+                <div class="location2">2 Km from bus stand</div>
+                <div class="nearest">2 Km from your location</div>
+                <div class="discount">20%</div>
+                <div class="fees">Rs 5768</div>
+                <div class="semester">Per Semester(3months)</div>
+                <div class="others">Free cancellation Free wifi</div>
+                <div class="strike">Rs 60756</div>
+            </div>
+            
+        </div>
+
+        <div class="college">
+            <!-- <div class="image-section">
+                <img src="./photo.jpg">
+            </div> -->
+
+            <div class="image-desc">
+                <div class="best">Best college 2018</div>
+                <div class="distance">2 kms away</div>
+                <div class="rank">#7 in 260 colleges in north campus</div>
+                <div class="rating">3.9/5 Very Good</div>
+            </div>
+
+            <div class="college-details">
+                <div class="name">Hansraj College</div>
+                <div class="location1">Near Metro Station</div>
+                <div class="location2">2 Km from bus stand</div>
+                <div class="nearest">2 Km from your location</div>
+                <div class="discount">20%</div>
+                <div class="fees">Rs 5768</div>
+                <div class="semester">Per Semester(3 months)</div>
+                <div class="others">Free cancellation Free wifi</div>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>
