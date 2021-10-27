@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task</title>
+    <script src="https://kit.fontawesome.com/b0b12920c3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet"> 
     <style>
         .college-list{
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
+            font-family: 'Noto Sans', sans-serif;
         }
         .college-list .college{
             border-style: solid;
+            height: 420px;
+            width: 900px;
         }
         .image-desc{
             position: relative;
-            background-image: url("photo.jpg");
+            /* background-image: url("photo.jpg"); */
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('photo.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             height: 300px;
@@ -29,6 +43,7 @@
             border-radius: 20px;
             width: 150px;
             bottom: 10%;
+            text-align: center;
         }
         .image-desc .distance{
             position: absolute;
@@ -38,31 +53,41 @@
             width: 100px;
             bottom: 10%;
             left: 200px;
+            text-align: center;
         }
         .image-desc .rank{
             position: absolute;
             /* width: 500px; */
-            bottom: 10%;
-            left: 500px;
+            bottom: 5%;
+            left: 600px;
             color: white;
+            font-family: 'Noto Serif', serif;
         }
         .image-desc .rating{
             position: absolute;
-            width: 50px;
+            width: 90px;
             background-color: rgb(238, 178, 12);
             background-repeat: no-repeat;
             color: white;
             right: 125px;
             top: 10%;
+            text-align: center;
+            font-family: 'Lora', sans-serif;
         }
         .college-details{
             position: relative;
+        }
+        .college-details .name{
+            position: relative;
+            font-size: 30px;
         }
         .college-details .fees{
             position: absolute;
             color: red;
             right: 20px;
             bottom: 20%;
+            font-size: 30px;
+            font-weight: bold;
         }
         .college-details .semester{
             position: absolute;
@@ -72,20 +97,30 @@
         .college-details .others{
             position: absolute;
             color: rgb(37, 211, 144);
+            font-size: 15px;
             right: 20px;
-            bottom: 0;
+            bottom: 0px;
         }
         .college-details .strike{
             position: absolute;
             text-decoration: line-through;
             right: 20px;
-            top: 20px;
+            top: 10px;
+        }
+        .college-details .discount {
+            position: absolute;
+            background-color: rgb(57, 202, 142);
+            background-repeat: no-repeat;
+            border-radius: 0 0 0 0;
+        }
+        .first{
+            font-family: 'Lora', serif;
         }
     </style>
 
 </head>
 <body>
-    <p>Colleges in North India</p>
+    <p class="first">Colleges in North India</p>
     <section class="college-list">
         <div class="college">
             <!-- <div class="image-section">
@@ -96,19 +131,25 @@
                 <div class="best">Best college 2018</div>
                 <div class="distance">2 kms away</div>
                 <div class="rank">#7 in 260 colleges in north campus</div>
-                <div class="rating">3.9/5 Very Good</div>
+                <div class="rating">3.9/5 &emsp; Very Good</div>
             </div>
 
             <div class="college-details">
-                <div class="name"><span style="font-weight: bold;">Hansraj College</span></div>
-                <div class="location1">Near Metro Station</div>
-                <div class="location2">2 Km from bus stand | 2 Km from your location</div>
-                <div class="discount">20%</div>
+                <div class="name">
+                    <span style="font-weight: bold;">Hansraj College</span>
+                    <span style="font-size: 10px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                
+                <div class="location"><span style="font-weight: bold;">2 Km from bus stand </span>| 2 Km from your location</div>
+                
                 <div class="fees">Rs 5768</div>
                 <div class="semester">Per Semester(3months)</div>
-                <div class="others">Free cancellation Free wifi</div>
-                <div class="strike">Rs 60756</div>
-                <div class="match"><span style="color: rgb(84, 192, 120);">93% match</span>: 2.5 Km from GTB Nagar</div>
+                <div class="others">Free cancellation . Free wifi</div>
+                <div class="strike">Rs 60756 <i class="fas fa-tags"></i></div>
+                <div class="match"><span style="color: rgb(84, 192, 120);">93% match</span>: <span style="font-weight: bold;">2.5 Km</span> from GTB Nagar</div>
                 <div class="discount">Flat Rs 2000 off</div>
             </div>
             
@@ -123,18 +164,25 @@
                 <div class="best">Best college 2018</div>
                 <div class="distance">2 kms away</div>
                 <div class="rank">#7 in 260 colleges in north campus</div>
-                <div class="rating">3.9/5 Very Good</div>
+                <div class="rating">3.9/5 &emsp; Very Good</div>
             </div>
 
             <div class="college-details">
-                <div class="name"><span style="font-weight: bold;">Hansraj College</span></div>
-                <div class="location1">Near Metro Station</div>
-                <div class="location2">2 Km from bus stand | 2 Km from your location</div>
-                <div class="discount">20%</div>
+                <div class="name">
+                    <span style="font-weight: bold;">Hansraj College</span>
+                    <span style="font-size: 10px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                
+                <div class="location"><span style="font-weight: bold;">2 Km from bus stand </span>| 2 Km from your location</div>
+                
                 <div class="fees">Rs 5768</div>
                 <div class="semester">Per Semester(3 months)</div>
-                <div class="others">Free cancellation Free wifi</div>
-                <div class="match"><span style="color: rgb(84, 192, 120);">93% match</span>: 2.5 Km from GTB Nagar</div>
+                <div class="others">Free cancellation . Free wifi</div>
+                <div class="strike">Rs 60756 <i class="fas fa-tags"></i></div>
+                <div class="match"><span style="color: rgb(84, 192, 120);">93% match</span>: <span style="font-weight: bold;">2.5 Km</span> from GTB Nagar</div>
                 <div class="discount">Flat Rs 2000 off</div>
             </div>
             
